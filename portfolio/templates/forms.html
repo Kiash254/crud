@@ -1,0 +1,16 @@
+{%extends "main.html" %}
+
+{% block content %}
+
+{% for port in portfolio%}
+
+<h5>{{port.name}}</h5>
+  <h5>{{port.age}}</h5>
+    <h5>{{port.career}}</h5>
+{% {% endfor %}%}
+<form action="" method="POST">
+  {% csrf_token %}
+<h5>{{form.as_p}}</h5>
+<input type="submit" name="submit">
+</form>
+{% endblock%}

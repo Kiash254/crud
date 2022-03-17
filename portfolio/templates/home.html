@@ -1,0 +1,16 @@
+ {% extends 'main.html' %}
+ 
+ {%block content%}
+<h1>hello</h>
+ <p><a href="{% url 'portfolio:create' %}">create</a><p/>
+<button type="submit"><a href="{% url 'portfolio:room-delete' portfolio.id %}">Delete</a></button>
+   
+    {% comment %} {%for port in portfolio %}
+    {{port.name}}
+    {{port.age}}
+    {{port.career}}
+   <p><a href="{%url 'portfolio:detail' portfolio.id %}">update</a> <p/>
+    
+    {%endfor %} {% endcomment %}
+
+ {%endblock%}
